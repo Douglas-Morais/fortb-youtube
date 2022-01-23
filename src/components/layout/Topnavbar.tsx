@@ -6,8 +6,7 @@ const Nav = styled.nav`
     width: 100vw;
     height: 3.5rem;
     padding: 8px 0px;
-    color: whitesmoke;
-    background-color: rgba(43, 43, 43, 1);
+    background-color: ${({theme}) => theme.colors.secondaryBackground};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,7 +16,7 @@ const Nav = styled.nav`
       padding: 0px 16px;
       
       svg {
-        fill: whitesmoke;
+        fill: ${({theme}) => theme.colors.textColor};
         height: 20px;
         padding-right: 1rem;
 
@@ -41,10 +40,10 @@ const Nav = styled.nav`
             outline: none;
             border: 0;
             border-radius: 2px 0px 0px 2px;
-            color: whitesmoke;
-            background-color: black;
+            color: ${({theme}) => theme.colors.textColor};
+            background-color: ${({theme}) => theme.colors.primaryBackground};
             padding: 10px;
-            box-shadow: 0px 0px 0px 1px #3e3e3e;
+            box-shadow: 0px 0px 0px 1px ${({theme}) => theme.colors.gray};
             font-size: 1rem;
             font-weight: 400;
 
@@ -57,7 +56,7 @@ const Nav = styled.nav`
             }
 
             &:focus {
-              box-shadow: 0px 0px 0px 1px #3ea6ff;
+              box-shadow: 0px 0px 0px 1px ${({theme}) => theme.colors.blue};
             }
           }
 
@@ -69,25 +68,26 @@ const Nav = styled.nav`
 
             &[type="submit"] {
               border-radius: 0px 2px 2px 0px;
-              background-color: #3e3e3e;
-              box-shadow: 1px 0px 0px 1px #3e3e3e;
+              background-color: ${({theme}) => theme.colors.secondaryBackground};
+              box-shadow: 1px 0px 0px 1px ${({theme}) => theme.colors.gray};
+              margin-left: 1px;
               
               svg {
                 width: 24px;
                 height: 24px;
-                fill: whitesmoke;
+                fill: ${({theme}) => theme.colors.textColor};
               }
             }
   
             &[type="button"] {
               border-radius: 50%;
-              background-color: black;
+              background-color: ${({theme}) => `${theme.colors.dark}03`};
               margin-left: 8px;
               
               svg {
                 width: 24px;
                 height: 24px;
-                fill: whitesmoke;
+                fill: ${({theme}) => theme.colors.textColor};
               }
             }
           }
@@ -106,12 +106,15 @@ const Nav = styled.nav`
         width: 40px;
         height: 40px;
         margin-left: 8px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: ${({theme}) => `${theme.colors.light}0c`};
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         svg {
           width: 24px;
           height: 24px;
-          fill: whitesmoke;
+          fill: ${({theme}) => theme.colors.textColor};
         }    
 
         &-radius {
