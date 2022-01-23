@@ -1,8 +1,9 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import { ReactNode } from "react";
 import styled from "styled-components";
 
-const Link = styled.div`
+const LinkStyle = styled.div`
   .link-group {
     display: flex;
     align-items: center;
@@ -39,16 +40,19 @@ interface IProps {
    * <svg>...</svg>
    */
   children: ReactNode;
+  href: string;
   name: string;
 }
 
 const LinkIconGroup: NextPage<IProps> = (props) => {
-  return (<Link>
-    <a href="/" className="link-group">
-      {props.children}
-      <span>{props.name}</span>
-    </a>
-  </Link>)
+  return (<LinkStyle>
+    <Link href={props.href}>
+      <a className="link-group">
+        {props.children}
+        <span>{props.name}</span>
+      </a>
+    </Link>
+  </LinkStyle>)
 };
 
 export default LinkIconGroup;
