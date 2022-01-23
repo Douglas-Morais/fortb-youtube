@@ -54,6 +54,15 @@ const Sidebar = styled.aside`
       letter-spacing: .5px;
       font-weight: 500;
     }
+
+    #copyright {
+      color: ${({ theme }) => `${theme.colors.textColorDisabled}`};
+      font-size: 12px;
+      font-weight: 300;
+      text-align: center;
+      padding: 4px 24px 12px 24px;
+      width: 100%;
+    }
   }
 `;
 
@@ -146,6 +155,13 @@ const Sidenavbar: NextPage = () => {
         </LinkIconGroup>
 
         <DividingLine></DividingLine>
+
+        <div id="copyright">
+          <p>
+            © 2022 Frontend <br />
+            Dev. Douglas Morais
+          </p>
+        </div>
 
       </aside>
     </Sidebar>
