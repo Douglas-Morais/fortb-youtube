@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 const Link = styled.div`
@@ -31,6 +32,13 @@ const Link = styled.div`
 `;
 
 interface IProps {
+  /**
+   * Expected a single SVG Code
+   * @param svg
+   * @example
+   * <svg>...</svg>
+   */
+  children: ReactNode;
   name: string;
 }
 
