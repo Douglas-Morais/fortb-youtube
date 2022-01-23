@@ -3,121 +3,120 @@ import styled from "styled-components";
 import SignInButton from "../utils/SignInButton";
 
 const Nav = styled.nav`
-  nav {
-    width: 100vw;
-    height: 3.5rem;
-    padding: 8px 0px;
-    background-color: ${({theme}) => theme.colors.secondaryBackground};
+  position: fixed;
+  width: 100%;
+  height: ${({ theme }) => theme.metric.topNavbar};
+  padding: 8px 0px;
+  background-color: ${({theme}) => theme.colors.secondaryBackground};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .brand {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0px 16px;
+    
+    svg {
+      fill: ${({theme}) => theme.colors.textColor};
+      height: 20px;
+      padding-right: 1rem;
 
-    .brand {
-      display: flex;
-      padding: 0px 16px;
-      
-      svg {
-        fill: ${({theme}) => theme.colors.textColor};
-        height: 20px;
-        padding-right: 1rem;
-
-        &:first-child {
-          cursor: pointer;
-        }
+      &:first-child {
+        cursor: pointer;
       }
     }
+  }
 
-    .search {
-      width: 100%;
+  .search {
+    width: 100%;
 
-      .input {
-        &-group {
-          display: flex;
-          align-content: stretch;
-          padding: 0 10%;
-
-          input {
-            flex: 1 0 auto;
-            outline: none;
-            border: 0;
-            border-radius: 2px 0px 0px 2px;
-            color: ${({theme}) => theme.colors.textColor};
-            background-color: ${({theme}) => theme.colors.primaryBackground};
-            padding: 10px;
-            box-shadow: 0px 0px 0px 1px ${({theme}) => theme.colors.gray};
-            font-size: 1rem;
-            font-weight: 400;
-
-            &[type=search]::-webkit-search-cancel-button {
-              -webkit-appearance: none;
-              height: 20px;
-              width: 20px;
-              background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='whitesmoke'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
-              cursor: pointer;
-            }
-
-            &:focus {
-              box-shadow: 0px 0px 0px 1px ${({theme}) => theme.colors.blue};
-            }
-          }
-
-          button {
-            cursor: pointer;
-            outline: 0;
-            border: 0;
-            width: 40px;
-
-            &[type="submit"] {
-              border-radius: 0px 2px 2px 0px;
-              background-color: ${({theme}) => theme.colors.secondaryBackground};
-              box-shadow: 1px 0px 0px 1px ${({theme}) => theme.colors.gray};
-              margin-left: 1px;
-              
-              svg {
-                width: 24px;
-                height: 24px;
-                fill: ${({theme}) => theme.colors.textColor};
-              }
-            }
-  
-            &[type="button"] {
-              border-radius: 50%;
-              background-color: ${({theme}) => `${theme.colors.dark}03`};
-              margin-left: 8px;
-              
-              svg {
-                width: 24px;
-                height: 24px;
-                fill: ${({theme}) => theme.colors.textColor};
-              }
-            }
-          }
-        }
-      }      
-    }
-
-    .icons {
-      display: flex;
-      padding-right: 16px;
-
-      .btn {
-        cursor: pointer;
-        outline: 0;
-        border: 0;
-        width: 40px;
-        height: 40px;
-        margin-right: 12px;
-        background-color: ${({theme}) => `${theme.colors.light}0c`};
+    .input {
+      &-group {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
+        align-content: stretch;
+        padding: 0 10%;
 
-        svg {
-          width: 24px;
-          height: 24px;
-          fill: ${({theme}) => theme.colors.textColor};
+        input {
+          flex: 1 0 auto;
+          outline: none;
+          border: 0;
+          border-radius: 2px 0px 0px 2px;
+          color: ${({theme}) => theme.colors.textColor};
+          background-color: ${({theme}) => theme.colors.primaryBackground};
+          padding: 10px;
+          box-shadow: 0px 0px 0px 1px ${({theme}) => theme.colors.gray};
+          font-size: 1rem;
+          font-weight: 400;
+
+          &[type=search]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='whitesmoke'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+            cursor: pointer;
+          }
+
+          &:focus {
+            box-shadow: 0px 0px 0px 1px ${({theme}) => theme.colors.blue};
+          }
         }
+
+        button {
+          cursor: pointer;
+          outline: 0;
+          border: 0;
+          width: 40px;
+
+          &[type="submit"] {
+            border-radius: 0px 2px 2px 0px;
+            background-color: ${({theme}) => theme.colors.secondaryBackground};
+            box-shadow: 1px 0px 0px 1px ${({theme}) => theme.colors.gray};
+            margin-left: 1px;
+            
+            svg {
+              width: 24px;
+              height: 24px;
+              fill: ${({theme}) => theme.colors.textColor};
+            }
+          }
+
+          &[type="button"] {
+            border-radius: 50%;
+            background-color: ${({theme}) => `${theme.colors.dark}03`};
+            margin-left: 8px;
+            
+            svg {
+              width: 24px;
+              height: 24px;
+              fill: ${({theme}) => theme.colors.textColor};
+            }
+          }
+        }
+      }
+    }      
+  }
+
+  .icons {
+    display: flex;
+    padding-right: 16px;
+
+    .btn {
+      cursor: pointer;
+      outline: 0;
+      border: 0;
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      background-color: ${({theme}) => `${theme.colors.light}0c`};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: ${({theme}) => theme.colors.textColor};
       }
     }
   }
@@ -126,7 +125,6 @@ const Nav = styled.nav`
 const Topnavbar: NextPage = () => {
   return (
     <Nav>
-      <nav>
         <div className="brand">
           <svg viewBox="0 0 24 24">
             <g>
@@ -182,7 +180,6 @@ const Topnavbar: NextPage = () => {
           </button>
           <SignInButton></SignInButton>
         </div>
-      </nav>
     </Nav>
   )
 }

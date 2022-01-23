@@ -13,5 +13,8 @@ declare module 'styled-components' {
       gray: string;
       blue: string;
     };
+    metric: {
+      topNavbar: string;
+    }
   }
 }

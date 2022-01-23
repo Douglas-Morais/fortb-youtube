@@ -12,4 +12,7 @@ export const lightTheme: DefaultTheme = {
     gray: '#ccc',
     blue: '#065fd4',
   },
+  metric: {
+    topNavbar: '3.5rem',
+  }
 };

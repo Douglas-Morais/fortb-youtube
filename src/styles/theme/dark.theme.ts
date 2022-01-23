@@ -12,4 +12,7 @@ export const darkTheme: DefaultTheme = {
     gray: '#3e3e3e',
     blue: '#3ea6ff',
   },
+  metric: {
+    topNavbar: '3.5rem',
+  }
 }
