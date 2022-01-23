@@ -51,12 +51,12 @@ const LinkIconGroup: NextPage<IProps> = (props) => {
 
   const handleClick = (e: SyntheticEvent) => {
     e.preventDefault();
-    router.push(props.href);
+    router.push(props.href, undefined, {shallow: true});
   }
 
   return (
     <LinkStyle>
-      <Link href={props.href} shallow={true}>
+      <Link href={props.href}>
         <a className={`link-group ${router.asPath === props.href ? 'active' : ''}`} onClick={handleClick}>
           {props.children}
           <span>{props.name}</span>
