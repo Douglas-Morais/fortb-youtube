@@ -14,11 +14,45 @@ const Sidebar = styled.aside`
     height: 100vh;
     padding-top: 3.8rem;
     z-index: -1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => `${theme.colors.secondaryBackground} ${theme.colors.light}99`};
+
+    &::-webkit-scrollbar {
+      width: 14px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme.colors.secondaryBackground};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => `${theme.colors.light}00`};
+      border-radius: 20px;
+      border: 2px solid ${({ theme }) => theme.colors.secondaryBackground};
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => `${theme.colors.light}99`};
+    }
+
+    &::-webkit-scrollbar-button {
+      height: 3.5rem;
+    }
 
     .signin {
       padding: 0px 32px;
       color: ${({ theme }) => theme.colors.textColor};
       font-size: 14px;
+    }
+
+    h3 {
+      padding: 4px 24px 12px 24px;
+      margin: 0;
+      color: ${({ theme }) => `${theme.colors.textColorDisabled}`};
+      font-size: 14px;
+      letter-spacing: .5px;
+      font-weight: 500;
     }
   }
 `;
@@ -71,6 +105,47 @@ const Sidenavbar: NextPage = () => {
           <SignInButton></SignInButton>
         </div>
 
+        <DividingLine></DividingLine>
+
+        <h3>BEST OF YOUTUBE</h3>
+
+        <LinkIconGroup name="Music" href="/channel/music">
+          <img src="https://yt3.ggpht.com/8siyrWVrP2JoHXw_o-rNk25TwzPPlclq9-4LkJ6LL7Irk0_ovqVjO2e1jVSb7iVcJDKj3TFDMk8=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="Sports" href="/channel/sports">
+          <img src="https://yt3.ggpht.com/uhzNRSSq4A8dfIaOjCBJSMRU5BFoWkBIYYA3iBdZvZxHYkWWFSG9deg-Stej4yQdFv0u9KxJ=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="Gaming" href="/channel/gaming">
+          <img src="https://yt3.ggpht.com/DPTcl8E8QEA8ceqrPBi1i4nm3ufq8at1ybHQWcEQ9hsAtZo70FmC7HB6Fl9iBhqAB76cxGRuGfg=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="Movies" href="/channel/movies">
+          <img src="https://yt3.ggpht.com/6lo97rUTO7xhIBXZqLiaW2kA_eMBIEmqc27EqlKLyE4nAY-yzcKBG0Hs0YdUka3gJ629HcwgyzQ=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="News" href="/channel/news">
+          <img src="https://yt3.ggpht.com/R71nRxVlLnQs7DnQICeIzoaNrpDXxmhjq2ULvHSNeStICjFD5ygqyFvKxKyUivjah6rUlAFWlQY=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="Live" href="/channel/live">
+          <img src="https://yt3.ggpht.com/8D6JlsnvwDZFMdcbjqVji82kggP3aXXbO-yBD0RFrKlp4G1zNt9wcqcVTSPnAI8GuUAbDYQwsg=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="Learning" href="/channel/learning">
+          <img src="https://yt3.ggpht.com/6h1hHijctH34LA2wXzXt4jiPELRQGG1_LyfbEohjfbG4t5gHqirz8Mn68WEG8W0rFsdwbz8DGQ=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="Music" href="/channel/">
+          <img src="https://yt3.ggpht.com/xezV7Q9aPgcmyx3fcFsbizYL-wvm6O4UpEubIDBZNqaQdfb8k6SBp1xu8s4WH_Q-FNfkhNGwVw=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <LinkIconGroup name="360° Video" href="/channel/360video">
+          <img src="https://yt3.ggpht.com/XqoajHMBdMmDPQlm9yiL4wr7LVhN1OPv_uU8oBRzbgtBi0mDAbBa13zIRKCoVAZNHPGFQSW21Kk=s88-c-k-c0x00ffffff-no-rj" />
+        </LinkIconGroup>
+
+        <DividingLine></DividingLine>
 
       </aside>
     </Sidebar>

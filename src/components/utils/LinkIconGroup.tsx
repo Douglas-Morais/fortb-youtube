@@ -20,10 +20,17 @@ const LinkStyle = styled.div`
       background-color: ${({ theme }) => `${theme.colors.light}1a`};
     }
 
-    svg {
+    svg,
+    img {
+      height: 32px;
+      width: 32px;
+      margin-right: 24px;
+      border-radius: 50%;
+    }
+
+    img {
       height: 24px;
       width: 24px;
-      margin-right: 24px;
     }
 
     span {
@@ -38,8 +45,10 @@ interface IProps {
   /**
    * Expected a single SVG Code
    * @param svg
-   * @example
-   * <svg>...</svg>
+   * @example <svg>...</svg>
+   * 
+   * @param img
+   * @example <img>...</img>
    */
   children: ReactNode;
   href: string;
