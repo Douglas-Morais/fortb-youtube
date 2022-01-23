@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import styled from "styled-components";
+import DividingLine from "../utils/DividingLine";
 import LinkIconGroup from "../utils/LinkIconGroup";
 
 const Sidebar = styled.aside`
@@ -40,6 +41,7 @@ const Sidenavbar: NextPage = () => {
             </g>
           </svg>
         </LinkIconGroup>
+        <DividingLine></DividingLine>
       </aside>
     </Sidebar>
   )
