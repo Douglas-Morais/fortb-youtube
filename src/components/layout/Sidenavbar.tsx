@@ -28,7 +28,7 @@ const Sidebar = styled.aside`
   }
 
   &:hover::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => `${theme.colors.light}99`};
+    background-color: #bababa87;
   }
 
   .signin {
