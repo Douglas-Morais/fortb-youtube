@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { useRouter } from "next/router";
+import { ReactNode, SyntheticEvent } from "react";
 import styled from "styled-components";
 
 const LinkStyle = styled.div`
@@ -14,7 +15,8 @@ const LinkStyle = styled.div`
     fill: ${({ theme }) => theme.colors.textColor};
     padding: 0px 24px;
 
-    &:hover {
+    &:hover,
+    &.active {
       background-color: ${({ theme }) => `${theme.colors.light}1a`};
     }
 
@@ -45,14 +47,23 @@ interface IProps {
 }
 
 const LinkIconGroup: NextPage<IProps> = (props) => {
-  return (<LinkStyle>
-    <Link href={props.href}>
-      <a className="link-group">
-        {props.children}
-        <span>{props.name}</span>
-      </a>
-    </Link>
-  </LinkStyle>)
+  const router = useRouter();
+
+  const handleClick = (e: SyntheticEvent) => {
+    e.preventDefault();
+    router.push(props.href);
+  }
+
+  return (
+    <LinkStyle>
+      <Link href={props.href} shallow={true}>
+        <a className={`link-group ${router.asPath === props.href ? 'active' : ''}`} onClick={handleClick}>
+          {props.children}
+          <span>{props.name}</span>
+        </a>
+      </Link>
+    </LinkStyle>
+  )
 };
 
 export default LinkIconGroup;
