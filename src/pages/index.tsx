@@ -24,7 +24,9 @@ const Style = styled.div`
 
   .main {
     grid-area: main;
+    background-color: ${({ theme }) => theme.colors.primaryBackground};
     overflow-y: scroll;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: ${({ theme }) => `${theme.colors.secondaryBackground} ${theme.colors.light}99`};
 

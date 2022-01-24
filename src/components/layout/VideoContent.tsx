@@ -16,14 +16,10 @@ const Style = styled.div`
 
   #videos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 3rem 1rem;
     padding: 20px;
     background-color: ${({ theme }) => theme.colors.primaryBackground};
-  }
-
-  #videos:first-child {
-    border-top: none;
   }
 `;
 
