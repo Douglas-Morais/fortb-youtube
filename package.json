@@ -1,6 +1,11 @@
 {
   "name": "fortb-youtube",
   "private": true,
+  "author": {
+    "name": "Douglas Morais",
+    "email": "douglascarvalhomorais@hotmail.com"
+  },
+  "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
