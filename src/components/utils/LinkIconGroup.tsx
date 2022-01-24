@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ReactNode, SyntheticEvent } from "react";
+import { ReactNode, SyntheticEvent, useEffect, useState } from "react";
 import styled from "styled-components";
 
 const LinkStyle = styled.div`
@@ -63,10 +63,13 @@ const LinkIconGroup: NextPage<IProps> = (props) => {
     router.push(props.href, undefined, {shallow: true});
   }
 
+  const [active, setActive] = useState('');
+  useEffect(() => router.asPath === props.href ? setActive("active") : undefined)
+
   return (
     <LinkStyle>
       <Link href={props.href}>
-        <a className={`link-group ${router.asPath === props.href ? 'active' : ''}`} onClick={handleClick}>
+        <a className={`link-group ${active}`} onClick={handleClick}>
           {props.children}
           <span>{props.name}</span>
         </a>
