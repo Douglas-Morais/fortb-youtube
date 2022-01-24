@@ -1,34 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- markdownlint-disable MD033 MD036 MD041 MD014 -->
+<p align="center">
+  <img src="./public/img/fortBrasil.png" height="50">
+</p>
+<br>
+<br>
 
-## Getting Started
+<h1 align="center"><img src="./public/icons/logo-youtube.png" height="20"> Clone Youtube</h1>
+<p align="center">💚 Desafio FortBrasil 💚</p>
+<p align="center">
+💻 Codificação da página principal do Youtube 💻
+</p>
 
-First, run the development server:
+<br>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Dev-Frontend-brightgreen?style=for-the-badge&logo=rocketdotchat" height="23">
+<img src="https://img.shields.io/badge/NextJS-TypeScript-red?style=for-the-badge&logo=react" height="23">
+<br>
+<img src="https://img.shields.io/github/issues/Douglas-Morais/fortb-youtube?style=for-the-badge" height="23">
+<img src="https://img.shields.io/github/forks/Douglas-Morais/fortb-youtube?style=for-the-badge" height="23">
+<img src="https://img.shields.io/github/stars/Douglas-Morais/fortb-youtube?style=for-the-badge" height="23">
+<img src="https://img.shields.io/github/license/Douglas-Morais/fortb-youtube?style=for-the-badge" height="23">
+</p>
+<br>
+
+
+## Sumário
+
+- [Sumário](#sumário)
+- [🔥 Desafio Escolhido](#-desafio-escolhido)
+- [💡 Solução](#-solução)
+  - [✔️ Componentização](#️-componentização)
+- [Responsividade](#responsividade)
+- [Status da Aplicação](#status-da-aplicação)
+- [Iniciando a Aplicação](#iniciando-a-aplicação)
+  - [Clone da Aplicação](#clone-da-aplicação)
+  - [Servidor da Aplicação](#servidor-da-aplicação)
+    - [Acesso da aplicação](#acesso-da-aplicação)
+- [🔑 Licença de uso](#-licença-de-uso)
+
+## 🔥 Desafio Escolhido
+
+> Codificar o Frontend de aplicações de Streaming de vídeo como Disney+, Netflix, Prime
+Vídeos..."
+
+## 💡 Solução
+
+### ✔️ Componentização
+
+Escolha dos componentes de layout
+
+<img src="./public/img/grid@png-8.png">
+
+<img src="./public/img/content@png-8.png">
+
+## Responsividade
+
+Dispositivos:
+- [x] 4k
+- [x] FullHD
+- [x] HD
+- [ ] Tablet
+- [ ] Smartphones
+
+## Status da Aplicação
+
+⏸️ Projeto pausado para avaliação...
+
+## Iniciando a Aplicação
+
+### Clone da Aplicação
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Download do projeto
+$ git clone https://github.com/Douglas-Morais/fortb-youtube.git
+
+# Entrando na página do projeto
+$ cd fortb-youtube
+
+# Abra com o editor de sua preferência (ex. VSCode)
+$ code .
+
+# Instale as depedendências
+$ npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Servidor da Aplicação
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+  # desenvolvimento com hot-reload
+  $ npm run dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+  # incia aplicação
+  $ npm run start
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  # gera arquivos para produção
+  $ npm run build
+```
 
-## Learn More
+#### Acesso da aplicação
 
-To learn more about Next.js, take a look at the following resources:
+[http://localhost:3000/docs/](http://localhost:3000/docs/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔑 Licença de uso
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT](LICENSE).
