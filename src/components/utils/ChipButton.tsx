@@ -6,9 +6,9 @@ const ChipStyle = styled.button`
   outline: 0;
   font-size: 14px;
   color: ${({theme}) => theme.colors.textColor};
-  background-color: ${({theme}) => theme.colors.gray};
+  background-color: ${({theme}) => `${theme.colors.gray}60`};
   padding: 8px 16px;
-  border: .5px solid ${({theme}) => `${theme.colors.light}1a`};
+  border: .5px solid ${({theme}) => `${theme.colors.gray}`};
   border-radius: 20px;
   margin: 0px 4px;
 `;

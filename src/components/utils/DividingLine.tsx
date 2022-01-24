@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyleHr = styled.hr`
   width: 95%;
   border: 0;
-  border-top: 1px solid #ffffff1a;
+  border-top: 1px solid ${({theme}) => theme.colors.gray};
   margin: 0.85rem auto;
 
   &.reset {
