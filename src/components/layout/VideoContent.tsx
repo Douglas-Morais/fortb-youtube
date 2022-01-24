@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import styled from "styled-components";
+import OthersPage from "../../pages/[...others]";
 import ChipButton from "../utils/ChipButton";
 import DividingLine from "../utils/DividingLine";
 import VideoContainer from "../utils/VideoContainer";

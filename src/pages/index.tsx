@@ -50,17 +50,17 @@ const Style = styled.div`
   }
 `;
 
-const Home: NextPage = () => {
-  const [theme, setTheme] = useState<DefaultTheme>(darkTheme);
+interface IHomeProps {
+  onChangeTheme(): void;
+}
 
+const Home: NextPage<IHomeProps> = (props) => {
   const toggleTheme = () => {
-    theme.name === 'light' ? setTheme(darkTheme) : setTheme(lightTheme);
-    console.log('Toggle theme!');
+    props.onChangeTheme();
   };
 
   return (<>
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
+    
       <Head>
         <title>Youtube Clone layout</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"></link>
@@ -72,7 +72,6 @@ const Home: NextPage = () => {
         <div className='bar-side'><Sidenavbar></Sidenavbar></div>
         <div className='main'><VideoContent></VideoContent></div>
       </Style>
-    </ThemeProvider>
   </>)
 }
 
