@@ -69,7 +69,7 @@ const Nav = styled.nav`
 
           &[type="submit"] {
             border-radius: 0px 2px 2px 0px;
-            background-color: ${({theme}) => theme.colors.secondaryBackground};
+            background-color: ${({theme}) => theme.colors.gray};
             box-shadow: 1px 0px 0px 1px ${({theme}) => theme.colors.gray};
             margin-left: 1px;
             

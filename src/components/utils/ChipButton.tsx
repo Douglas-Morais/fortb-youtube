@@ -10,6 +10,7 @@ const ChipStyle = styled.button`
   padding: 8px 16px;
   border: .5px solid ${({theme}) => `${theme.colors.light}1a`};
   border-radius: 20px;
+  margin: 0px 4px;
 `;
 
 interface IChip {

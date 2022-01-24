@@ -6,10 +6,19 @@ const StyleHr = styled.hr`
   border: 0;
   border-top: 1px solid #ffffff1a;
   margin: 0.85rem auto;
+
+  &.reset {
+    margin: 0;
+    width: 100%;
+  }
 `;
 
-const DividingLine: NextPage = () => {
-  return (<StyleHr></StyleHr>)
+interface IDividingLine {
+  resetMargin?: boolean;
+}
+
+const DividingLine: NextPage<IDividingLine> = (props) => {
+  return (<StyleHr className={props.resetMargin ? 'reset' : ''}></StyleHr>)
 }
 
 export default DividingLine;
