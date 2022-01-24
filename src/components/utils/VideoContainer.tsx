@@ -22,6 +22,7 @@ flex-direction: column;
     font-size: .85rem;
   }
 
+  &-bg,
   &-image {
     width: 100%;
     height: 100%;
@@ -113,11 +114,13 @@ const VideoContainer: NextPage = () => {
   return (
     <Style>
       <a href="#" className="thumbnail" data-duration="12:24" onClick={getImage}>
-        {thumbnail ? <img className="thumbnail-image" src={thumbnail} /> : <img></img>}
+        <div className="thumbnail-bg">
+          {thumbnail ? <img className="thumbnail-image" src={thumbnail} /> : <img></img>}
+        </div>
       </a>
       <div className="video-bottom-section">
         <a href="#">
-        {channelIcon ? <img className="channel-icon" src={channelIcon} /> : <img></img>}
+          {channelIcon ? <img className="channel-icon" src={channelIcon} /> : <img></img>}
         </a>
         <div className="video-details">
           <a href="#" className="video-title">Video Title</a>
