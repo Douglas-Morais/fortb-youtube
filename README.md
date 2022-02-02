@@ -51,8 +51,12 @@ Vídeos..."
 Escolha dos componentes de layout
 
 <img src="./public/img/grid@png-8.png">
+<p align="center"><i>Figura 1 - Página principal</i></p>
+<br>
 
 <img src="./public/img/content@png-8.png">
+<p align="center"><i>Figura 2 - Outros detalhes da divisão do componente VideoContent</i></p>
+<br>
 
 ## Responsividade
 
@@ -65,7 +69,7 @@ Dispositivos:
 
 ## Status da Aplicação
 
-⏸️ Projeto pausado para avaliação...
+⏯️ Projeto em atualizações semanais...
 
 ## Iniciando a Aplicação
 
