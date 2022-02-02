@@ -52,7 +52,7 @@ interface IProps {
    */
   children: ReactNode;
   href: string;
-  name: string;
+  title: string;
 }
 
 const LinkIconGroup: NextPage<IProps> = (props) => {
@@ -71,7 +71,7 @@ const LinkIconGroup: NextPage<IProps> = (props) => {
       <Link href={props.href}>
         <a className={`link-group ${active}`} onClick={handleClick}>
           {props.children}
-          <span>{props.name}</span>
+          <span>{props.title}</span>
         </a>
       </Link>
     </LinkStyle>
